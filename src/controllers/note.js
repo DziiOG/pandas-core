@@ -8,8 +8,8 @@ const BaseController = require('./base')
  * @name ActivityController
  * @extends BaseController
  */
-module.exports.name = 'ActivityController'
-module.exports.dependencies = ['ActivityRepository', 'miscHelper', 'logger', 'response', 'mongoose']
+module.exports.name = 'NoteController'
+module.exports.dependencies = ['NoteRepository', 'miscHelper', 'logger', 'response', 'mongoose']
 module.exports.factory = class extends BaseController {
   /**
    * @param {object} repo The repository which will handle the operations to be

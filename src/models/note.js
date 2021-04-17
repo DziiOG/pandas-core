@@ -4,7 +4,7 @@
  * @author Whitson Dzimah <workwithwhitson@gmail.com>
  */
 
-module.exports.name = 'ActivityModel'
+module.exports.name = 'NoteModel'
 module.exports.dependencies = ['mongoose']
 module.exports.factory = mongoose => {
   'use strict'
@@ -12,8 +12,17 @@ module.exports.factory = mongoose => {
   const Schema = mongoose.Schema
   const schema = new Schema(
     {
-      name: {
-        type: String
+      title: {
+        type: String,
+        required: [true, 'Title is required']
+      },
+      body: {
+        type: String,
+        required: [true, 'Body is required']
+      },
+      type: {
+        type: String,
+        required: [true, 'Type is required']
       }
     },
     {
@@ -27,5 +36,5 @@ module.exports.factory = mongoose => {
     }
   )
 
-  return mongoose.model('Activity', schema)
+  return mongoose.model('Note', schema)
 }

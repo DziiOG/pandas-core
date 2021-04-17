@@ -8,8 +8,8 @@ const BaseRepository = require('./base')
  * @description This class extends the BaseRepository class.
  * This is a dependency for the OrderController class.
  */
-module.exports.name = 'ActivityRepository'
-module.exports.dependencies = ['ActivityModel', 'logger']
+module.exports.name = 'NoteRepository'
+module.exports.dependencies = ['NoteModel', 'logger']
 module.exports.factory = class extends BaseRepository {
   /**
    * @param { object } model mongodb model which provides the db drive methods.
